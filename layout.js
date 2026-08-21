@@ -1,4 +1,4 @@
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const currentPath = window.location.pathname;
 
 const header = document.getElementById("site-header");
 const footer = document.getElementById("site-footer");
@@ -7,8 +7,8 @@ const footer = document.getElementById("site-footer");
     header.innerHTML = `
         <header class="header" id="topo">
         <div class="container nav-wrap">
-            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
-            <img src="img/madc_2.png" alt="Logo MADC Comunicação Visual" class="logo-img" />
+            <a href="/" class="logo" aria-label="Ir para a página inicial">
+              <img src="/img/madc_2.png" alt="Logo MADC Comunicação Visual" class="logo-img" />
             </a>
 
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-list">
@@ -18,11 +18,24 @@ const footer = document.getElementById("site-footer");
             </button>
 
             <nav class="nav" id="menu-list">
-            <a href="index.html" class="${currentPage === "index.html" ? "active" : ""}">Início</a>
-            <a href="servicos.html" class="${currentPage === "servicos.html" ? "active" : ""}">Serviços</a>
-            <a href="portfolio.html" class="${currentPage === "portfolio.html" ? "active" : ""}">Portfólio</a>
-            <a href="sobre.html" class="${currentPage === "sobre.html" ? "active" : ""}">Sobre</a>
-            <a href="contato.html" class="${currentPage === "contato.html" ? "active" : ""}">Contato</a>
+              <a href="/" class="${currentPath === "/" ? "active" : ""}">Início</a>
+
+              <a href="/servicos/" class="${currentPath.startsWith("/servicos/") ? "active" : ""}">
+                Serviços
+              </a>
+
+              <a href="/portfolio/" class="${currentPath.startsWith("/portfolio/") ? "active" : ""}">
+                Portfólio
+              </a>
+
+              <a href="/sobre/" class="${currentPath.startsWith("/sobre/") ? "active" : ""}">
+                Sobre
+              </a>
+
+              <a href="/contato/" class="${currentPath.startsWith("/contato/") ? "active" : ""}">
+                Contato
+              </a>
+            </nav>
             <div class="nav-socials">
               <a href="https://www.instagram.com/madc.digital" target="_blank" rel="noopener noreferrer" aria-label="Instagram da MADC">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -74,7 +87,7 @@ const footer = document.getElementById("site-footer");
         </div>
         <div class="container footer-wrap">
             <p>MADC Digital Comunicação Visual | CNPJ: 29.586.504/0001-17</p>
-            <p>Rua Antônio Gomes, 93 - Vila Diva - São Paulo - SP
+            <p>Rua Antônio Gomes, 93 - Vila Diva - São Paulo - SP</p>
             <p>&copy; 2026 - Todos os direitos reservados.</p>
         </div>
         </footer>
