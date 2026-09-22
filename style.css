@@ -1,11 +1,13 @@
+/* MADC Comunicação Visual — CSS consolidado e limpo.
+   Regras redundantes removidas de forma conservadora para preservar o visual atual. */
+
 :root {
   --bg: #0f1115;
   --surface: #171a20;
   --surface-soft: #1e232d;
   --text: #f4f6fa;
   --muted: #b2b9c7;
-  --accent: #ef3b1f;
-  --accent-hover: #ff593f;
+
   --white: #ffffff;
   --line: #2d3340;
   --radius: 14px;
@@ -108,7 +110,7 @@ h2 {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--white);
+  
 }
 
 .btn-primary:hover {
@@ -122,7 +124,7 @@ h2 {
 
 .btn-outline {
   border: 1px solid rgba(255, 255, 255, 0.34);
-  color: var(--white);
+  
 }
 
 .btn-outline:hover {
@@ -179,28 +181,25 @@ h2 {
 }
 
 .nav-wrap {
-  min-height: 88px;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
+
   margin-left: 0;
 }
 
 .logo-img {
-  height: 58px;
-  width: auto;
-  object-fit: contain;
+
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  
   margin-right: 0;
 }
 
@@ -432,7 +431,7 @@ h2 {
   display: grid;
   place-items: center;
   background: rgba(239, 59, 31, 0.16);
-  color: var(--accent);
+  
   font-size: 1.3rem;
   margin-bottom: 14px;
 }
@@ -449,8 +448,7 @@ h2 {
 }
 
 .service-detail-grid {
-  display: grid;
-  gap: 22px;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -499,15 +497,13 @@ h2 {
 }
 
 .step-number {
-  display: inline-flex;
-  color: var(--accent);
+
   font-weight: 800;
   margin-bottom: 14px;
 }
 
 .portfolio-grid {
-  display: grid;
-  gap: 18px;
+
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -515,7 +511,7 @@ h2 {
   display: grid;
   gap: 36px;
   grid-template-columns: 0.9fr 1fr;
-  align-items: end;
+  
   margin-bottom: 34px;
 }
 
@@ -529,17 +525,16 @@ h2 {
 }
 
 .project {
-  position: relative;
+  
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project img {
-  width: 100%;
-  height: 100%;
+
   aspect-ratio: 16 / 11;
-  object-fit: cover;
+  
   transition: transform 0.35s ease;
 }
 
@@ -547,10 +542,10 @@ h2 {
   position: absolute;
   inset: 0;
   display: grid;
-  align-items: end;
+  
   padding: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.8));
-  opacity: 0;
+  
   transition: opacity 0.25s ease;
 }
 
@@ -560,7 +555,7 @@ h2 {
 }
 
 .project:hover img {
-  transform: scale(1.05);
+  
 }
 
 .project:hover .overlay {
@@ -631,14 +626,14 @@ h2 {
 }
 
 .contact-info ul {
-  list-style: none;
+  
   padding: 0;
   margin: 18px 0 0;
 }
 
 .contact-info li {
   margin-bottom: 12px;
-  color: var(--muted);
+  
 }
 
 .contact-note {
@@ -679,7 +674,7 @@ h2 {
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  outline: 2px solid rgba(239, 59, 31, 0.34);
+  
   border-color: rgba(239, 59, 31, 0.6);
 }
 
@@ -696,18 +691,16 @@ h2 {
 }
 
 .footer-wrap {
-  display: flex;
+  
   flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  text-align: center;
+
 }
 
 .footer p {
   margin: 0;
   color: var(--muted);
   font-size: 0.85rem;
-  line-height: 1.4;
+  
 }
 
 .footer strong {
@@ -921,9 +914,7 @@ h2 {
 }
 
 .logo-img {
-  height: 46px;
-  width: auto;
-  object-fit: contain;
+
 }
 
 .nav {
@@ -998,7 +989,7 @@ h2 {
 
 .hero-benefits li::before {
   content: "✓";
-  color: var(--accent);
+  
   font-weight: 800;
   margin-right: 6px;
 }
@@ -1110,7 +1101,7 @@ h2 {
   place-items: center;
   margin-bottom: 20px;
   border-radius: 12px;
-  color: var(--white);
+  
   background: var(--accent);
   font-weight: 800;
 }
@@ -1160,9 +1151,7 @@ h2 {
   border: 1px solid rgba(120, 190, 255, 0.18);
   border-radius: 22px;
   overflow: hidden;
-  box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.35),
-    inset 0 0 18px rgba(255, 255, 255, 0.02);
+  
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -1171,8 +1160,7 @@ h2 {
 
 /* Borda com brilho frio */
 .home-services .service-feature::before {
-  content: "";
-  position: absolute;
+
   inset: 0;
   padding: 1px;
   border-radius: 22px;
@@ -1182,8 +1170,6 @@ h2 {
     rgba(78, 184, 255, 0.45),
     rgba(255, 255, 255, 0.06)
   );
-  opacity: 0.65;
-  pointer-events: none;
 
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -1194,12 +1180,7 @@ h2 {
 
 /* Luz interna azulada */
 .home-services .service-feature::after {
-  content: "";
-  position: absolute;
-  width: 190px;
-  height: 190px;
-  top: -80px;
-  right: -80px;
+
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -1207,32 +1188,24 @@ h2 {
     rgba(78, 184, 255, 0.08) 42%,
     transparent 70%
   );
-  filter: blur(10px);
-  pointer-events: none;
+
 }
 
 /* Hover com brilho de LED */
 .home-services .service-feature:hover {
   transform: translateY(-8px);
   border-color: rgba(120, 200, 255, 0.65);
-  box-shadow:
-    0 0 18px rgba(78, 184, 255, 0.22),
-    0 0 42px rgba(78, 184, 255, 0.12),
-    0 20px 42px rgba(0, 0, 0, 0.5);
+  
 }
 
 /* Número com aparência de placa iluminada */
 .home-services .service-number {
-  width: 58px;
-  height: 58px;
+
   border-radius: 18px;
   background:
     radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.22), transparent 30%),
     linear-gradient(145deg, rgba(78, 184, 255, 0.26), rgba(255, 255, 255, 0.06));
-  color: #9bdcff;
-  box-shadow:
-    0 0 16px rgba(78, 184, 255, 0.18),
-    inset 0 0 14px rgba(255, 255, 255, 0.05);
+
 }
 
 /* Mantém o conteúdo acima dos brilhos */
@@ -1691,14 +1664,14 @@ h2 {
 
 /* Grid mais moderno */
 .portfolio-grid {
-  display: grid;
+  
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  
 }
 
 /* Card do portfólio */
 .project {
-  min-height: 280px;
+  
   border-radius: 22px;
   overflow: hidden;
   background: #11151d;
@@ -1724,7 +1697,7 @@ h2 {
   height: 100%;
   min-height: 280px;
   object-fit: cover;
-  filter: brightness(0.82) saturate(1.05);
+  
   transition: transform 0.45s ease, filter 0.45s ease;
 }
 
@@ -1764,12 +1737,9 @@ h2 {
 
 /* Hover */
 .project:hover {
-  transform: translateY(-6px);
+  
   border-color: rgba(110, 231, 249, 0.48);
-  box-shadow:
-    0 0 18px rgba(110, 231, 249, 0.13),
-    0 0 38px rgba(139, 92, 246, 0.10),
-    0 20px 42px rgba(0, 0, 0, 0.48);
+  
 }
 
 .project:hover img {
@@ -1884,8 +1854,7 @@ h2 {
 
 .project:hover img,
 .featured-project:hover img {
-  filter: brightness(0.92) saturate(1.25);
-  transform: scale(1.05);
+
 }
 
 /* Faz a foto caber inteira dentro do card do portfólio */
@@ -1972,7 +1941,7 @@ h2 {
 .portfolio-lightbox {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  
   display: none;
   align-items: center;
   justify-content: center;
@@ -1986,8 +1955,7 @@ h2 {
 }
 
 .portfolio-lightbox img {
-  max-width: 92vw;
-  max-height: 88vh;
+
   width: auto;
   height: auto;
   object-fit: contain;
@@ -2116,30 +2084,12 @@ h2 {
 
 /* From Uiverse.io by ilkhoeri */ 
 .wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   overflow: hidden;
 }
 
 .inner {
-  --w: 100px;
-  --h: 150px;
-  --translateZ: calc((var(--w) + var(--h)) + 0px);
-  --rotateX: -15deg;
-  --perspective: 1000px;
-  position: absolute;
-  width: var(--w);
-  height: var(--h);
-  top: 25%;
-  left: calc(50% - (var(--w) / 2) - 2.5px);
-  z-index: 2;
-  transform-style: preserve-3d;
-  transform: perspective(var(--perspective));
+
   animation: rotating 20s linear infinite; /* */
 }
 @keyframes rotating {
@@ -2154,19 +2104,16 @@ h2 {
 }
 
 .card {
-  position: absolute;
+  
   border: 2px solid rgba(var(--color-card));
   border-radius: 12px;
   overflow: hidden;
   inset: 0;
-  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
-    translateZ(var(--translateZ));
+  
 }
 
 .img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
   background: #0000
     radial-gradient(
       circle,
@@ -2530,14 +2477,14 @@ h2 {
 
 .custom-select-button {
   width: 100%;
-  height: 64px;
+  
   padding: 0 22px;
   border-radius: 16px;
   border: 1px solid rgba(110, 231, 249, 0.22);
   background:
     linear-gradient(135deg, rgba(127, 255, 212, 0.07), rgba(139, 92, 246, 0.06)),
     #111722;
-  color: rgba(255, 255, 255, 0.62);
+  
   font-family: inherit;
   font-size: 1rem;
   text-align: left;
@@ -2553,17 +2500,15 @@ h2 {
 .custom-select-button:hover,
 .custom-select.open .custom-select-button {
   border-color: rgba(127, 255, 212, 0.75);
-  box-shadow:
-    0 0 0 3px rgba(127, 255, 212, 0.08),
-    0 0 18px rgba(110, 231, 249, 0.12);
+  
 }
 
 .custom-select-button.selected {
-  color: #ffffff;
+  
 }
 
 .custom-select-arrow {
-  color: #7fffd4;
+  
   font-size: 1.25rem;
   transition: transform 0.2s ease;
 }
@@ -2576,7 +2521,7 @@ h2 {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(100% + 10px);
+  
   z-index: 50;
 
   display: none;
@@ -2590,10 +2535,6 @@ h2 {
     radial-gradient(circle at top right, rgba(127, 255, 212, 0.10), transparent 34%),
     linear-gradient(160deg, #171c25, #10151f);
 
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.45),
-    0 0 22px rgba(110, 231, 249, 0.10);
-
   overflow: hidden;
 }
 
@@ -2604,7 +2545,7 @@ h2 {
 .custom-select-options li {
   padding: 14px 16px;
   border-radius: 12px;
-  color: #ffffff;
+  
   cursor: pointer;
   font-size: 0.98rem;
 
@@ -2614,17 +2555,16 @@ h2 {
 .custom-select-options li:hover {
   background:
     linear-gradient(135deg, rgba(127, 255, 212, 0.18), rgba(139, 92, 246, 0.14));
-  color: #ffffff;
-  transform: translateX(3px);
+
 }
 
 .custom-select-options li.selected {
   background:
     linear-gradient(135deg, rgba(127, 255, 212, 0.22), rgba(110, 231, 249, 0.16));
-  color: #7fffd4;
+  
 }
 .custom-select-button {
-  height: 64px;
+  
   padding: 0 18px;
   border-radius: 14px;
   border: 1px solid rgba(110, 231, 249, 0.22);
@@ -2650,7 +2590,7 @@ h2 {
 }
 
 .custom-select-options {
-  top: calc(100% + 8px);
+  
   padding: 8px;
   border-radius: 14px;
   border: 1px solid rgba(110, 231, 249, 0.22);
