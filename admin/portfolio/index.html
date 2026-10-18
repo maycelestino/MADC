@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="robots"
+    content="noindex, nofollow"
+  >
+
+  <title>Gerenciar Portfólio | MADC Digital</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/img/icon_madc.png"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/admin/portfolio/portfolio-admin.css"
+  >
+</head>
+
+<body>
+
+  <header class="admin-header">
+
+    <div class="admin-container header-content">
+
+      <a
+        href="/admin/painel/"
+        class="admin-logo"
+      >
+        <img
+          src="/img/madc_2.png"
+          alt="MADC Digital"
+        >
+      </a>
+
+      <div class="admin-user">
+
+        <span id="userEmail"></span>
+
+        <button
+          id="logoutButton"
+          type="button"
+        >
+          Sair
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main class="admin-main">
+
+    <div class="admin-container">
+
+      <div class="page-top">
+
+        <div>
+
+          <a
+            href="/admin/painel/"
+            class="back-link"
+          >
+            ← Voltar ao painel
+          </a>
+
+          <span class="admin-tag">
+            Portfólio
+          </span>
+
+          <h1>
+            Gerenciar projetos
+          </h1>
+
+          <p>
+            Adicione, edite ou remova os projetos exibidos no site.
+          </p>
+
+        </div>
+
+        <button
+          id="newProjectButton"
+          type="button"
+          class="primary-button"
+        >
+          + Novo projeto
+        </button>
+
+      </div>
+
+
+        <div
+          id="portfolioList"
+          class="portfolio-list"
+        >
+          <p class="loading">
+            Carregando projetos...
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <div
+    id="projectModal"
+    class="modal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-card">
+
+      <button
+        id="closeModal"
+        type="button"
+        class="modal-close"
+        aria-label="Fechar"
+      >
+        ×
+      </button>
+
+
+      <h2 id="modalTitle">
+        Novo projeto
+      </h2>
+
+
+      <form id="projectForm">
+
+        <input
+          type="hidden"
+          id="projectId"
+        >
+
+
+        <div class="form-field">
+
+          <label for="titulo">
+            Título
+          </label>
+
+          <input
+            type="text"
+            id="titulo"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label for="categoria">
+            Categoria
+          </label>
+
+          <input
+            type="text"
+            id="categoria"
+            placeholder="Ex.: Fachada em ACM"
+          >
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label for="descricao">
+            Descrição
+          </label>
+
+          <textarea
+            id="descricao"
+            rows="4"
+          ></textarea>
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label for="imagem">
+            Imagem
+          </label>
+
+          <input
+            type="file"
+            id="imagem"
+            accept="image/jpeg,image/png,image/webp"
+          >
+
+          <small>
+            JPG, PNG ou WEBP. Máximo de 5 MB.
+          </small>
+
+        </div>
+
+
+        <div class="form-grid">
+
+          <div class="form-field">
+
+            <label for="ordem">
+              Ordem
+            </label>
+
+            <input
+              type="number"
+              id="ordem"
+              min="0"
+              value="0"
+            >
+
+          </div>
+
+
+          <div class="form-field checkbox-field">
+
+            <label>
+              <input
+                type="checkbox"
+                id="ativo"
+                checked
+              >
+
+              Projeto ativo
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <p
+          id="formMessage"
+          class="form-message"
+        ></p>
+
+
+        <button
+          type="submit"
+          id="saveProjectButton"
+          class="primary-button save-button"
+        >
+          Salvar projeto
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/admin/supabase-config.js"></script>
+  <script src="/admin/portfolio/portfolio-admin.js"></script>
+
+</body>
+
+</html>

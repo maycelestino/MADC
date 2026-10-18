@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="robots"
+    content="noindex, nofollow"
+  >
+
+  <title>Admin | MADC Digital</title>
+
+  <link rel="icon" type="image/png" href="/img/icon_madc.png" />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/admin/admin.css"
+  >
+</head>
+
+<body>
+
+  <main class="admin-login">
+
+    <section class="login-card">
+
+      <div class="login-brand">
+        <img
+          src="/img/madc_2.png"
+          alt="MADC Digital"
+          class="login-logo"
+        >
+      </div>
+
+      <div class="login-heading">
+        <span class="admin-tag">
+          Área administrativa
+        </span>
+
+        <h1>
+          Acesse o painel
+        </h1>
+
+        <p>
+          Entre com seus dados para gerenciar o conteúdo do site.
+        </p>
+      </div>
+
+      <form
+        id="loginForm"
+        class="login-form"
+      >
+
+        <div class="form-field">
+          <label for="email">
+            E-mail
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="seu@email.com"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="password">
+            Senha
+          </label>
+
+          <div class="password-field">
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              placeholder="Digite sua senha"
+              required
+            >
+
+            <button
+              type="button"
+              id="togglePassword"
+              class="password-toggle"
+              aria-label="Mostrar senha"
+            >
+              Mostrar
+            </button>
+
+          </div>
+        </div>
+
+        <p
+          id="loginMessage"
+          class="login-message"
+          aria-live="polite"
+        ></p>
+
+        <button
+          type="submit"
+          class="login-button"
+        >
+          Entrar
+        </button>
+
+      </form>
+
+      <a
+        href="/"
+        class="back-site"
+      >
+        ← Voltar para o site
+      </a>
+
+    </section>
+
+  </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/admin/supabase-config.js"></script>
+    <script src="/admin/admin.js"></script>
+
+</body>
+</html>

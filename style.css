@@ -3150,3 +3150,11 @@ h2 {
     display: none;
   }
 }
+
+.portfolio-loading {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 40px 0;
+  color: var(--muted);
+  text-align: center;
+}

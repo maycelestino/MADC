@@ -42,49 +42,13 @@
           </p>
         </div>
 
-        <div class="portfolio-grid">
-          <article class="project featured-project">
-            <img src="/img/juca_bowling.jpg" alt="Projeto de comunicação visual MADC" />
-            <div class="overlay">
-              <span>Projeto em destaque</span>
-              <h3>Comunicação visual personalizada para ambiente interno</h3>
-            </div>
-          </article>
-          <article class="project">
-            <img src="/img/meladinho.jpg" alt="Letreiro luminoso de loja" />
-            <div class="overlay">
-              <span>Letreiro</span>
-              <h3>Letreiro luminoso personalizado</h3>
-            </div>
-          </article>
-          <article class="project">
-            <img src="/img/alliance.jpg" alt="Comunicação visual interna corporativa" />
-            <div class="overlay">
-              <span>Comunicação</span>
-              <h3>Comunicação visual corporativa</h3>
-            </div>
-          </article>
-          <article class="project">
-            <img src="/img/wind.jpg" alt="Impressão digital para campanha" />
-            <div class="overlay">
-              <span>Impressão</span>
-              <h3>Impressão digital em grande formato</h3>
-            </div>
-          </article>
-          <article class="project">
-            <img src="/img/focinhos.jpg" alt="Projeto personalizado de identidade visual MADC" />
-            <div class="overlay">
-              <span>Personalizado</span>
-              <h3>Projeto personalizado de marca</h3>
-            </div>
-          </article>
-          <article class="project">
-            <img src="/img/gassi.jpg" alt="Fachada de alto impacto para comércio" />
-            <div class="overlay">
-              <span>Fachada</span>
-              <h3>Fachada de alto impacto</h3>
-            </div>
-          </article>
+        <div
+          class="portfolio-grid"
+          id="publicPortfolio"
+        >
+          <p class="portfolio-loading">
+            Carregando projetos...
+          </p>
         </div>
       </div>
     </section>
@@ -103,7 +67,13 @@
   </div>
   
   <div id="site-footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/admin/supabase-config.js"></script>
+
   <script src="/layout.js"></script>
-  <script src="/script.js"></script>
+  <script src="/script.js">
+
+  </script>
+  <script src="/portfolio/portfolio.js"></script>
 </body>
 </html>

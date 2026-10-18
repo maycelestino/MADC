@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="robots"
+    content="noindex, nofollow"
+  >
+
+  <title>Painel Administrativo | MADC Digital</title>
+
+  <link rel="icon" type="image/png" href="/img/icon_madc.png" />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/admin/painel/painel.css"
+  >
+</head>
+
+<body>
+
+  <header class="admin-header">
+
+    <div class="admin-container header-content">
+
+      <a href="/admin/painel/" class="admin-logo">
+        <img
+          src="/img/madc_2.png"
+          alt="MADC Digital"
+        >
+      </a>
+
+      <div class="admin-user">
+
+        <span id="userEmail"></span>
+
+        <button
+          id="logoutButton"
+          type="button"
+        >
+          Sair
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main class="admin-main">
+
+    <div class="admin-container">
+
+      <section class="dashboard-heading">
+
+        <span class="admin-tag">
+          Painel administrativo
+        </span>
+
+        <h1>
+          Gerenciamento do site
+        </h1>
+
+        <p>
+          Gerencie as imagens e conteúdos da MADC Digital.
+        </p>
+
+      </section>
+
+
+      <section class="dashboard-grid">
+
+        <article class="dashboard-card">
+
+          <span class="card-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="3"
+                y="4"
+                width="18"
+                height="16"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+
+              <circle
+                cx="9"
+                cy="10"
+                r="2"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+
+              <path
+                d="M5.5 17L10 13L13 15.5L16 12.5L19 15.5"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+
+          <div>
+            <h2>Portfólio</h2>
+
+            <p>
+              Adicione, altere ou remova projetos e imagens do portfólio.
+            </p>
+          </div>
+
+        <a
+            href="/admin/portfolio/"
+            class="card-button"
+        >
+            Gerenciar portfólio
+        </a>
+
+        </article>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/admin/supabase-config.js"></script>
+  <script src="/admin/painel/painel.js"></script>
+
+</body>
+
+</html>
