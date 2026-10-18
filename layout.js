@@ -55,7 +55,13 @@ const footer = document.getElementById("site-footer");
                   <path d="M21.7 18.6c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.2c-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.5 4.9.8.3 1.4.5 1.8.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3Z"/>
                 </svg>
               </a>
-              <a href="/admin/" aria-label="Área administrativa" title="Área administrativa">
+              <a
+                href="/admin/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Área administrativa"
+                title="Área administrativa"
+              >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm7 13H7v-9h10v9Z"/>
                 </svg>
